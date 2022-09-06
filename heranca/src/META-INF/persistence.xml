@@ -4,6 +4,10 @@
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
     <class>br.edu.ifsp.pep.modelo.Funcionario</class>
     <class>br.edu.ifsp.pep.modelo.Pessoa</class>
+    <class>joined.model.FuncionarioJoined</class>
+    <class>joined.model.PessoaJoined</class>
+    <class>tablePerClass.FuncionarioPerClass</class>
+    <class>tablePerClass.PessoaPerClass</class>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/db_aula?zeroDateTimeBehavior=CONVERT_TO_NULL"/>
       <property name="javax.persistence.jdbc.user" value="root"/>
