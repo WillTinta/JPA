@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 import javax.persistence.Column;
 import javax.persistence.Id;
 
-public class contaCorrente {
+public class ContaCorrente {
     
     @Id    
     @Column(name = "idConta")

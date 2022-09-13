@@ -3,7 +3,7 @@ package br.edu.ifsp.pep.modelo;
 import java.io.Serializable;
 import java.util.Objects;
 
-public class contaPK implements Serializable{
+public class ContaPK implements Serializable{
     private int numeroAgencia;
     private int numeroConta;
 
@@ -11,7 +11,7 @@ public class contaPK implements Serializable{
     public int hashCode() {
         int hash = 7;
         hash = 41 * hash + this.numeroAgencia;
-        hash = 41 * hash + this.numeroConta;
+        hash = 41 * hash + Objects.hashCode(this.numeroConta);
         return hash;
     }
 
@@ -26,7 +26,7 @@ public class contaPK implements Serializable{
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final contaPK other = (contaPK) obj;
+        final ContaPK other = (ContaPK) obj;
         if (this.numeroAgencia != other.numeroAgencia) {
             return false;
         }
