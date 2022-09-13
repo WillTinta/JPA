@@ -54,9 +54,10 @@ public class PessoaDAO extends AbstractDAO<Pessoa> {
         
         System.out.println("Estado Gerenciado? R: " + em.contains(p));
         
-        em.remove(em.merge(p));
+        Pessoa merge = em.find(Pessoa.class, p.getId());
+        em.remove(merge);
         
-        em.getTransaction();
+        em.getTransaction().commit();
         em.close();
     }
 }
